@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Routes – UniGuide Istanbul</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Student-friendly daily routes in Istanbul.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="index.html">UniGuide <span>Istanbul</span></a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item active"><a href="routes.html">Routes</a></li>
+          <li class="nav-item"><a href="places.html">Places</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Title -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Student City Routes</h1>
+        <p>
+          Simple, one-day plans designed for university students who are new in Istanbul.
+        </p>
+      </div>
+    </section>
+
+    <!-- Route Filter (can be used with JS later) -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="filter-bar">
+          <span>Filter by area:</span>
+          <button class="btn btn-outline" data-area="all">All</button>
+          <button class="btn btn-outline" data-area="kadikoy">Kadıköy</button>
+          <button class="btn btn-outline" data-area="besiktas">Beşiktaş</button>
+          <button class="btn btn-outline" data-area="taksim">Taksim</button>
+        </div>
+
+        <!-- Route Cards -->
+        <div class="card-grid">
+          <article class="card route-card" data-area="kadikoy">
+            <h2>Kadıköy One-Day Route</h2>
+            <p class="route-meta">Area: Kadıköy • Duration: ~6 hours • Budget: Low</p>
+            <ol class="route-steps">
+              <li>Start with breakfast around Kadıköy Çarşı.</li>
+              <li>Walk through the streets full of bookstores and vintage shops.</li>
+              <li>Study or chill at a student-friendly café in Moda.</li>
+              <li>End the day with sunset at Moda seaside and street food.</li>
+            </ol>
+            <a href="#" class="card-link">Open in Maps (example link)</a>
+          </article>
+
+          <article class="card route-card" data-area="besiktas">
+            <h2>Beşiktaş Campus & Bosphorus Route</h2>
+            <p class="route-meta">Area: Beşiktaş • Duration: ~5 hours • Budget: Medium</p>
+            <ol class="route-steps">
+              <li>Visit university campus area around Beşiktaş square.</li>
+              <li>Lunch at cheap student restaurants in the side streets.</li>
+              <li>Walk to Ortaköy along the Bosphorus.</li>
+              <li>Study break at a café with Bosphorus view.</li>
+            </ol>
+            <a href="#" class="card-link">Open in Maps (example link)</a>
+          </article>
+
+          <article class="card route-card" data-area="taksim">
+            <h2>Taksim & Galata Lite Route</h2>
+            <p class="route-meta">Area: Taksim • Duration: ~5 hours • Budget: Medium</p>
+            <ol class="route-steps">
+              <li>Start at Taksim Square and walk down İstiklal Street.</li>
+              <li>Stop by bookstores and art galleries on the way.</li>
+              <li>Reach Galata Tower area and explore side streets.</li>
+              <li>Finish with a budget-friendly dinner in Karaköy.</li>
+            </ol>
+            <a href="#" class="card-link">Open in Maps (example link)</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info Text -->
+    <section class="section">
+      <div class="container">
+        <h2>How to Use These Routes?</h2>
+        <ul>
+          <li>Choose a route that matches your campus location and budget.</li>
+          <li>Check public transport options before you start.</li>
+          <li>Combine routes or edit them according to your own pace.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>©️ 2025 UniGuide Istanbul – Student City Routes</p>
+    </div>
+    <script src="assets/js/script.js"></script>
+  </footer>
+</body>
+</html>
