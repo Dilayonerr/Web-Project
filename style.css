@@ -1,0 +1,300 @@
+/* =====================================
+   Temel Ayarlar
+===================================== */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Konteyner */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* =====================================
+   Header - Menü
+===================================== */
+
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.logo a {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.logo span {
+  color: #0066cc;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav a {
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  color: #666;
+}
+
+.main-nav a:hover {
+  color: #0066cc;
+}
+
+.nav-item.active a {
+  color: #0066cc;
+  border-bottom: 2px solid #0066cc;
+}
+
+/* =====================================
+   Butonlar
+===================================== */
+
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #0066cc;
+  color: white;
+}
+
+.btn-outline {
+  background-color: white;
+  color: #666;
+}
+
+.btn-outline:hover {
+  background-color: #e3f0ff;
+  color: #0066cc;
+}
+
+/* =====================================
+   Hero Bölümü
+===================================== */
+
+.hero {
+  padding: 40px 0;
+  background-color: #f2f7ff;
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.hero-text {
+  flex: 2;
+}
+
+.hero-text h1 {
+  font-size: 28px;
+}
+
+.hero-text p {
+  color: #666;
+}
+
+.hero-highlight {
+  flex: 1;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+.hero-highlight h2 {
+  margin-top: 0;
+}
+
+.hero-highlight ul {
+  list-style-type: disc;
+  padding-left: 16px;
+  color: #666;
+}
+
+/* =====================================
+   Genel Bölüm Ayarları
+===================================== */
+
+.section {
+  padding: 40px 0;
+}
+
+.section-alt {
+  background-color: #f5f5f5;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-header p {
+  color: #666;
+}
+
+/* =====================================
+   Kartlar ve Grid
+===================================== */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 16px;
+  border: 1px solid #ddd;
+}
+
+.card h3,
+.card h2 {
+  margin-top: 0;
+}
+
+/* Route */
+.route-card .route-meta,
+.place-meta {
+  font-size: 14px;
+  color: #666;
+}
+
+.route-steps {
+  list-style-type: disc;
+  padding-left: 16px;
+}
+
+/* Link */
+.card-link {
+  color: #0066cc;
+  font-weight: bold;
+}
+
+/* =====================================
+   Filtre barı
+===================================== */
+
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.filter-bar span {
+  color: #666;
+  font-size: 14px;
+}
+
+/* =====================================
+   İletişim Sayfası
+===================================== */
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.contact-form-wrapper,
+.contact-info {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 120px;
+}
+
+/* =====================================
+   Footer
+===================================== */
+
+.site-footer {
+  text-align: center;
+  padding: 15px 0;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+  color: #666;
+}
+
+/* =====================================
+   Responsive Düzen
+===================================== */
+
+@media (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-content {
+    flex-direction: column;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
