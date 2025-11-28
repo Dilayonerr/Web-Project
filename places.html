@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Places – UniGuide Istanbul</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Student-friendly cafés, libraries, parks and museums in Istanbul.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="index.html">UniGuide <span>Istanbul</span></a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="routes.html">Routes</a></li>
+          <li class="nav-item active"><a href="places.html">Places</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Student-Friendly Places</h1>
+        <p>
+          Cafés, libraries, parks and museums recommended for university students 
+          with a limited budget.
+        </p>
+      </div>
+    </section>
+
+    <!-- Categories (could be used as JS filters) -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="filter-bar">
+          <span>Categories:</span>
+          <button class="btn btn-outline" data-category="all">All</button>
+          <button class="btn btn-outline" data-category="cafe">Cafés</button>
+          <button class="btn btn-outline" data-category="library">Libraries</button>
+          <button class="btn btn-outline" data-category="park">Parks</button>
+          <button class="btn btn-outline" data-category="museum">Museums</button>
+        </div>
+
+        <!-- Places Grid -->
+        <div class="card-grid">
+          <!-- Café Example -->
+          <article class="card place-card" data-category="cafe">
+            <h2>Moda Study Café</h2>
+            <p class="place-meta">Category: Café • Area: Kadıköy • Price: Low</p>
+            <p>
+              A quiet café with Wi-Fi, power sockets and student-friendly prices. 
+              Perfect for studying alone or with friends.
+            </p>
+            <a href="#" class="card-link">View on map</a>
+          </article>
+
+          <!-- Library Example -->
+          <article class="card place-card" data-category="library">
+            <h2>Atatürk Library</h2>
+            <p class="place-meta">Category: Library • Area: Taksim</p>
+            <p>
+              Public library with long opening hours and a large study area. 
+              Good for group or solo work.
+            </p>
+            <a href="#" class="card-link">View on map</a>
+          </article>
+
+          <!-- Park Example -->
+          <article class="card place-card" data-category="park">
+            <h2>Maçka Park</h2>
+            <p class="place-meta">Category: Park • Area: Şişli</p>
+            <p>
+              Green area in the middle of the city, suitable for walking, relaxing 
+              and taking a break between classes.
+            </p>
+            <a href="#" class="card-link">View on map</a>
+          </article>
+
+          <!-- Museum Example -->
+          <article class="card place-card" data-category="museum">
+            <h2>Istanbul Modern (Student Ticket)</h2>
+            <p class="place-meta">Category: Museum • Area: Karaköy</p>
+            <p>
+              Contemporary art museum with discounted tickets for students; 
+              great for cultural exploration.
+            </p>
+            <a href="#" class="card-link">View on map</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info / Tips -->
+    <section class="section">
+      <div class="container">
+        <h2>Tips for Students</h2>
+        <ul>
+          <li>Always check student discounts at museums and cultural events.</li>
+          <li>Save favourite places and combine them into your own routes.</li>
+          <li>Prefer locations close to public transport for easy access.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>©️ 2025 UniGuide Istanbul – Student City Routes</p>
+    </div>
+    <script src="assets/js/script.js"></script>
+  </footer>
+</body>
+</html>
