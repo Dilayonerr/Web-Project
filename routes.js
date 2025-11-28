@@ -1,11 +1,34 @@
-<div class="filter-bar">
-  <span>Filter by area:</span>
-  <button class="filter-tag" data-area="all">All</button>
-  <button class="filter-tag" data-area="kadikoy">Kadıköy</button>
-  <button class="filter-tag" data-area="besiktas">Beşiktaş</button>
-  <button class="filter-tag" data-area="taksim">Taksim</button>
-</div>
+// routes.js
+// Routes page - filter routes by area
 
-<article class="route-card" data-area="kadikoy">...</article>
-<article class="route-card" data-area="besiktas">...</article>
-<article class="route-card" data-area="taksim">...</article>
+document.addEventListener("DOMContentLoaded", function () {
+  const filterButtons = document.querySelectorAll(".filter-bar .filter-tag");
+  const routeCards = document.querySelectorAll(".route-card");
+
+  if (filterButtons.length === 0 || routeCards.length === 0) {
+    return; // HTML henüz bu yapıda değilse sessiz çık
+  }
+
+  filterButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      const selectedArea = button.getAttribute("data-area");
+
+      // Buton görsel durumu (aktif butonu vurgula)
+      filterButtons.forEach(function (btn) {
+        btn.classList.remove("active-filter");
+      });
+      button.classList.add("active-filter");
+
+      // Her rota kartı için göster/gizle
+      routeCards.forEach(function (card) {
+        const cardArea = card.getAttribute("data-area");
+
+        if (selectedArea === "all" || selectedArea === cardArea) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+});
