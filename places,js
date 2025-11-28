@@ -1,0 +1,34 @@
+// places.js
+// Places page - filter places by category
+
+document.addEventListener("DOMContentLoaded", function () {
+  const filterButtons = document.querySelectorAll(".filter-bar .filter-tag");
+  const placeCards = document.querySelectorAll(".place-card");
+
+  if (filterButtons.length === 0 || placeCards.length === 0) {
+    return;
+  }
+
+  filterButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      const selectedCategory = button.getAttribute("data-category");
+
+      // Buton vurgusu
+      filterButtons.forEach(function (btn) {
+        btn.classList.remove("active-filter");
+      });
+      button.classList.add("active-filter");
+
+      // Kartları göster/gizle
+      placeCards.forEach(function (card) {
+        const cardCategory = card.getAttribute("data-category");
+
+        if (selectedCategory === "all" || selectedCategory === cardCategory) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+});
