@@ -1,5 +1,3 @@
-// places.js
-// Places page - filter places by category
 
 document.addEventListener("DOMContentLoaded", function () {
   const filterButtons = document.querySelectorAll(".filter-bar .filter-tag");
@@ -13,13 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener("click", function () {
       const selectedCategory = button.getAttribute("data-category");
 
-      // Buton vurgusu
+    
       filterButtons.forEach(function (btn) {
         btn.classList.remove("active-filter");
       });
       button.classList.add("active-filter");
 
-      // Kartları göster/gizle
+      
       placeCards.forEach(function (card) {
         const cardCategory = card.getAttribute("data-category");
 
