@@ -1,5 +1,4 @@
-// contact.js
-// Contact page - simple form validation
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contact-form");
@@ -41,8 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("Please fix the following:\n\n" + errorMessage);
     } else {
       alert("Thank you! Your message has been received (demo).");
-      // Backend olmadığı için istersen yine de göndermeyi iptal edebilirsin:
-      // event.preventDefault();
+    
     }
   });
 });
